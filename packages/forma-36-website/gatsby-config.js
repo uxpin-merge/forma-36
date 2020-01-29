@@ -1,3 +1,9 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+console.log(process.env.NODE_ENV)
+
 module.exports = {
   siteMetadata: {
     title: 'Forma 36 - The Contentful Design System',
@@ -183,23 +189,23 @@ module.exports = {
     },
     'gatsby-transformer-javascript-frontmatter',
     'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        defaultLayouts: {
-          default: require.resolve('./src/components/Layout'),
-        },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              sizeByPixelDensity: true,
-            },
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-mdx',
+    //   options: {
+    //     defaultLayouts: {
+    //       default: require.resolve('./src/components/Layout'),
+    //     },
+    //     gatsbyRemarkPlugins: [
+    //       {
+    //         resolve: `gatsby-remark-images`,
+    //         options: {
+    //           maxWidth: 800,
+    //           sizeByPixelDensity: true,
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     'gatsby-plugin-sharp',
     'gatsby-plugin-emotion',
     {
@@ -220,6 +226,14 @@ module.exports = {
         trackingId: 'UA-40725207-15',
         anonymize: true,
         respectDNT: true,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `2jaflj4vvog1`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

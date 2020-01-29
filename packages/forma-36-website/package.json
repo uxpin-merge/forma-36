@@ -43,5 +43,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop"
+  },
+  "devDependencies": {
+    "gatsby-source-contentful": "^2.1.82"
   }
 }
