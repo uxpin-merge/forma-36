@@ -8,7 +8,8 @@ import { css } from '@emotion/core';
 import Header from './Header';
 import Promo from './Promo';
 import Container from './Container';
-import Navigation from './Navigation';
+import Sidebar from './Sidebar';
+// import Navigation from './Navigation';
 import './Layout.css';
 
 const styles = {
@@ -82,20 +83,15 @@ const Layout = props => (
 
           <Header />
 
-          <div css={styles.main}>
-            <Navigation
-              menuItems={
-                data.site.siteMetadata && data.site.siteMetadata.menuLinks
-              }
-              currentPath={props && props.location && props.location.pathname}
-            />
+          <main css={styles.main}>
+            <Sidebar location={props.location} />
 
             <Container
               frontmatter={props.pageContext && props.pageContext.frontmatter}
             >
               {props.children}
             </Container>
-          </div>
+          </main>
         </div>
       );
     }}

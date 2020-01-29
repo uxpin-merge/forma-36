@@ -86,7 +86,7 @@ class MenuListItem extends React.Component {
 
   render() {
     const { item, currentPath } = this.props;
-
+    const itemLink = `${item.parent && item.parent.link}/${item.link}`;
     return (
       <li css={styles.listItem}>
         <Link
@@ -95,8 +95,8 @@ class MenuListItem extends React.Component {
             this.state.isExpanded ||
               (this.checkOpen(item, currentPath) && styles.linkActive),
           ]}
-          to={item.link}
-          href={item.link}
+          to={itemLink}
+          href={itemLink}
           onClick={!item.link && (event => this.handleToggle(event))}
         >
           {item.name}
