@@ -86,7 +86,7 @@ class MenuListItem extends React.Component {
 
   render() {
     const { item, currentPath } = this.props;
-    const itemLink = `${item.parent && item.parent.link}/${item.link}`;
+    const itemLink = `${item.parent ? item.parent.link + "/" + item.link : ''}`
     return (
       <li css={styles.listItem}>
         <Link
@@ -97,7 +97,7 @@ class MenuListItem extends React.Component {
           ]}
           to={itemLink}
           href={itemLink}
-          onClick={!item.link && (event => this.handleToggle(event))}
+          onClick={!itemLink ? (event => this.handleToggle(event)) : () => {}}
         >
           {item.name}
         </Link>
