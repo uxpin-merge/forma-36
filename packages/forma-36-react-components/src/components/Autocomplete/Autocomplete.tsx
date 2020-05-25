@@ -1,4 +1,4 @@
-import React, { useMemo, useReducer, useRef } from 'react';
+import React, { useMemo, useReducer, useRef, useEffect } from 'react';
 
 import TextInput from '../TextInput';
 import Dropdown, { DropdownProps } from '../Dropdown';
@@ -42,8 +42,10 @@ export interface AutocompleteProps<T extends {}> {
   className?: string;
   maxHeight?: number;
   isLoading?: boolean;
+  takeFocus?: boolean;
   emptyListMessage?: string;
   noMatchesMessage?: string;
+  willUpdateOnSelect?: boolean;
   willClearQueryOnClose?: boolean;
   dropdownProps?: DropdownProps;
   renderToggleElement?: (props: RenderToggleElementProps) => React.ReactElement;
@@ -112,8 +114,10 @@ export const Autocomplete = <T extends {}>({
   className,
   maxHeight,
   isLoading,
+  takeFocus,
   emptyListMessage = 'No options',
   noMatchesMessage = 'No matches',
+  willUpdateOnSelect = true,
   willClearQueryOnClose,
   dropdownProps,
   renderToggleElement,
@@ -133,8 +137,10 @@ export const Autocomplete = <T extends {}>({
   };
 
   const selectItem = (item: T) => {
-    dispatch({ type: ITEM_SELECTED });
-    onQueryChange('');
+    if (willUpdateOnSelect) {
+      dispatch({ type: ITEM_SELECTED });
+      onQueryChange('');
+    }
     onChange(item);
   };
 
@@ -177,6 +183,15 @@ export const Autocomplete = <T extends {}>({
       inputRef.current.focus();
     }
   };
+
+  useEffect(
+    () => {
+      if (takeFocus && inputRef.current) {
+        inputRef.current.focus()
+      }
+    },
+    []
+  );
 
   const options = useMemo(
     () =>

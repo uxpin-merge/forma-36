@@ -37,6 +37,7 @@ const AutocompleteDefaultStory = ({ items }: { items: Item[] }) => {
         'placeholder',
         'Choose from spaces in your organization',
       )}
+      takeFocus={boolean('takeFocus', false)}
       isLoading={boolean('isLoading', false)}
       width={select(
         'width',
