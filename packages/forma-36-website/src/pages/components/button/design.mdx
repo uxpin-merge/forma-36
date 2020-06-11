@@ -1,2 +1,123 @@
 <!-- Must have otherwise mdx will treat this as a full page -->
+Buttons communicate the action that will occur when the user clicks them. They contain a text label to describe the action, and an icon if appropriate.
+
+## Button variations overview <a name="variations" />
+
+The `Button` component can be configured in a number of different ways. Here is an overview of Contentful buttons variations.
+
+ - Primary - Used for the most important actions in any scenario. Don’t use more than one primary button in a section or screen to avoid overwhelming users.
+
+ ```jsx
+ <>
+  <Button buttonType="primary">Primary</Button>
+ </>
+ ```
+ - Negative - For destructive actions - when something can't be undone. For example, deleting entities.
+  ```jsx
+ <>
+  <Button buttonType="negative">Negative</Button>
+ </>
+ ```
+ - Positive - For use when the action has a positive connotation such as creating or publishing a new entity.
+   ```jsx
+ <>
+  <Button buttonType="positive">Positive</Button>
+ </>
+ ```
+ - Muted - Used for a secondary actions, the most commonly used button type.
+   ```jsx
+ <>
+  <Button buttonType="muted">Musted</Button>
+ </>
+ ```
+ - Naked - Link button, secondary actions
+   ```jsx
+ <>
+  <Button buttonType="naked">Naked</Button>
+ </>
+ ```
+
+All of the variants are avalaible in 3 different sizes
+
+```jsx
+<React.Fragment>
+  <Grid rows={5} rowGap="spacingL">
+    <Grid columns={6}>
+      <Button buttonType="primary">Primary</Button>
+      <Button buttonType="negative">Negative</Button>
+      <Button buttonType="positive">Positive</Button>
+      <Button buttonType="muted">Muted</Button>
+      <Button buttonType="naked">Naked</Button>
+    </Grid>
+    <Grid columns={6}>
+      <Button buttonType="primary" isActive>Primary</Button>
+      <Button buttonType="negative" isActive>Negative</Button>
+      <Button buttonType="positive" isActive>Positive</Button>
+      <Button buttonType="muted" isActive>Muted</Button>
+      <Button buttonType="naked" isActive>Naked</Button>
+    </Grid>
+    <Grid columns={6}>
+      <Button buttonType="primary" loading>Primary</Button>
+      <Button buttonType="negative" loading>Negative</Button>
+      <Button buttonType="positive" loading>Positive</Button>
+      <Button buttonType="muted" loading>Muted</Button>
+      <Button buttonType="naked" loading>Naked</Button>
+    </Grid>
+    <Grid columns={6}>
+      <Button buttonType="primary" disabled>Primary</Button>
+      <Button buttonType="negative" disabled>Negative</Button>
+      <Button buttonType="positive" disabled>Positive</Button>
+      <Button buttonType="muted" disabled>Muted</Button>
+      <Button buttonType="naked" disabled>Naked</Button>
+    </Grid>
+    <Grid columns={6}>
+      <Button buttonType="primary" icon="Settings">
+        Primary
+      </Button>
+      <Button buttonType="negative" icon="Settings">
+        Negative
+      </Button>
+      <Button buttonType="positive" icon="Settings">
+        Positive
+      </Button>
+      <Button buttonType="muted" icon="Settings">
+        Muted
+      </Button>
+      <Button buttonType="naked" icon="Settings">
+        Naked
+      </Button>
+    </Grid>
+    <div></div>
+    <Grid columns={6}>
+      <Button buttonType="primary" size="large">
+        46px
+      </Button>
+      <Button buttonType="primary">40px</Button>
+      <Button buttonType="primary" size="small">
+        30px
+      </Button>
+    </Grid>
+  </Grid>
+</React.Fragment>
+```
+
+## Usage <a name="best-practices" />
+
+- Position buttons consistently in the interface
+- Reduce complexity by using a small number of actions. Too many actions can create confusion
+- Use clear, succinct, and accurate labels
+- Start button labels with verbs, for example "Add field", not "New field"
+- Position buttons in consistent places in the interface
+- Reduce complexity by using a small number of actions. Too many actions can create confusion when having to decide 
+
+## Writing guidelines <a name="writing-guidelines" />
+
+- To make `Button` action-oriented, use a verb. EX: "Add field", not "New field"
+- Consider what happens after a user clicks on the button and communicate that clearly in the copy. For example, “Get a UI Extension” vs “Explore all UI Extensions”
+- Use clear and succinct copy
+
+## Accessibility <a name="accessibility" />
+
+The `Button` component is used to trigger an action or event, such as submitting a form, opening a modal, canceling an action, or performing an add or delete operation. By default `Button` component is rendered using native `<button>` element. If href attribute is provided we render `Button` as `<a>` element. In both cases Contentful button has `type="button"` provided.
+
 export default ({ children }) => <>{children}</>

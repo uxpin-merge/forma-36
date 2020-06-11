@@ -1,4 +1,52 @@
-# Hello Button
+
+```jsx
+<>
+  <Grid columns={6}>
+    <Button buttonType="primary">Primary</Button>
+    <Button buttonType="negative">Negative</Button>
+    <Button buttonType="positive">Positive</Button>
+    <Button buttonType="muted">Muted</Button>
+    <Button buttonType="naked">Naked</Button>
+  </Grid>
+</>
+```
+## Exmaple of usage
+
+```jsx
+// import {Button} from '@contentful/forma-36-react-components';
+
+  <Form>
+    <TextField
+      required
+      name="nameInput"
+      id="nameInput"
+      labelText="Name"
+      value="Example name"
+      helpText="Please enter your name"
+    />
+    <TextField
+      required
+      name="emailInput"
+      id="emailInput"
+      labelText="E-Mail"
+      value="example.email@contentful.com"
+      helpText="Please enter your mail"
+    />
+    <Button>Submit</Button>
+  </Form>
+```
+
+| Props name  | Props values | Notes                                                                                                                                          |
+| :----------- | :-----------| :--------------------------------------------------------------------------------------------------------------------------------------------- |
+| **buttonType** | primary negative positive muted naked | specifies the type of the buttons and it's styles, required |
+| **size**  | large  default small | optional |
+| **icon**  | icon type names, eg "ArrowDown" | optional |
+| **disabled**  | boolean| optional |
+| **loading** | boolean | optional|
+| **isActive**  | boolean | optional |
+| **indicateDropdown**  | boolean | optional, determinated arrow icon on the right side in the button |
+| **isFullWidth**  | boolean | optional |
+| **href**  | string | optional, button will be redered as `<a>` |
 
 <!-- Must have otherwise mdx will treat this as a full page -->
 export default ({ children }) => <>{children}</>
