@@ -1,0 +1,26 @@
+{
+   "teamId": "sdnQa48Ui1",
+   "projectId": "sdnQqvKUi1",
+   "framework": "react",
+   "examplePaths": "packages/forma-36-react-components/src/components/**/*.stories.tsx",
+   "includePaths": [
+      "packages/forma-36-react-components/dist/styles.css"
+   ],
+   "deployPaths": [],
+   "packages": [
+      {
+         "src": {
+            "name": "@contentful/forma-36-react-components",
+            "entry": "packages/forma-36-react-components/src/index.ts"
+         },
+         "build": {
+            "entry": "packages/forma-36-react-components/dist/index.js"
+         }
+      }
+   ],
+   "useDynamicExampleParsing": true,
+   "alias": {
+      "react": "./packages/forma-36-react-components/node_modules/react",
+      "react-dom": "./packages/forma-36-react-components/node_modules/react-dom"
+   }
+}
