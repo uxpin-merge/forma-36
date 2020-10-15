@@ -41,7 +41,7 @@ function createRoot(callback: () => void) {
 const afterInit = (fn: Function) => (...args: any[]) => {
   if (!initiated) {
     initiated = true;
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       createRoot(() => {
         resolve(fn(...args));
       });
