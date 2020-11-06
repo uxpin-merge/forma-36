@@ -134,7 +134,6 @@
     "lint": "yarn eslint",
     "add-component": "yarn generate component",
     "add-documentation": "yarn generate documentation",
-    "prepublishOnly": "yarn lint && yarn test && yarn build",
     "travis-deploy-once": "travis-deploy-once --pro",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
