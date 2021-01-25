@@ -2,6 +2,7 @@ import React from 'react';
 import type {
   CSSProperties,
   FocusEvent,
+  HTMLProps,
   MouseEvent as ReactMouseEvent,
   FocusEventHandler,
   MouseEventHandler,
@@ -9,13 +10,13 @@ import type {
 } from 'react';
 import cn from 'classnames';
 import { CSSTransition } from 'react-transition-group';
+
 import Icon, { IconType } from '../Icon';
 import TabFocusTrap from '../TabFocusTrap';
 import Spinner from '../Spinner';
-
 import styles from './Button.css';
 
-export interface ButtonProps {
+interface CommonProps {
   icon?: IconType;
   indicateDropdown?: boolean;
   onClick?: MouseEventHandler;
@@ -33,12 +34,25 @@ export interface ButtonProps {
     | 'naked';
   type?: 'button' | 'submit' | 'reset';
   size?: 'small' | 'medium' | 'large';
-  href?: string;
   style?: CSSProperties;
   className?: string;
   children?: React.ReactNode;
   isActive?: boolean;
 }
+
+type AnchorProps =
+  | {
+      href?: undefined;
+      rel?: never;
+      target?: never;
+    }
+  | {
+      href: string;
+      rel?: HTMLProps<HTMLAnchorElement>['rel'];
+      target?: HTMLProps<HTMLAnchorElement>['target'];
+    };
+
+export type ButtonProps = CommonProps & AnchorProps;
 
 export const Button = ({
   buttonType = 'primary',
@@ -76,7 +90,7 @@ export const Button = ({
       ? 'secondary'
       : 'white';
 
-  const Element: ElementType = href ? 'a' : 'button';
+  const Element: ElementType = typeof href !== 'undefined' ? 'a' : 'button';
 
   return (
     <Element
