@@ -199,6 +199,10 @@ module.exports = {
                 link: '/components/checkbox-field/',
               },
               {
+                name: 'Datepicker',
+                link: '/components/datepicker/',
+              },
+              {
                 name: 'Form',
                 link: '/components/form/',
               },

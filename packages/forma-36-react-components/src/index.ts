@@ -18,6 +18,8 @@ export type {
   Spacing,
 } from '@contentful/f36-core';
 export * from '@contentful/f36-typography';
+export { Datepicker } from '@contentful/f36-datepicker';
+export type { DatepickerProps } from '@contentful/f36-datepicker';
 export * from './components/Accordion';
 export * from './components/Asset';
 export * from './components/Autocomplete';
