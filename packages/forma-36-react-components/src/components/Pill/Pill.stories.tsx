@@ -1,16 +1,16 @@
 import React from 'react';
+import { SectionHeading } from '@contentful/f36-typography';
 import { action } from '@storybook/addon-actions';
-import { Icon } from '../Icon';
+import { Flex } from '@contentful/f36-core';
+import { ThumbUp } from '@contentful/f36-icons';
 
 import { Pill, PillProps } from './Pill';
-import notes from './README.mdx';
 
 export default {
   title: 'Components/Pill',
   component: Pill,
   parameters: {
     propTypes: [Pill['__docgenInfo']],
-    notes,
   },
   argTypes: {
     label: { control: { type: 'text' } },
@@ -19,6 +19,7 @@ export default {
     onClose: { control: { disable: true } },
     onDrag: { control: { disable: true } },
     dragHandleComponent: { control: { disable: true } },
+    variant: { control: { disable: true } },
   },
 };
 
@@ -45,13 +46,47 @@ export const CustomHandleComponent = (args: PillProps) => (
     label={args.label}
     onDrag={args.onDrag}
     dragHandleComponent={
-      <Icon
-        icon="ThumbUp"
-        color="primary"
-        style={{ padding: '0.375rem 0.625rem' }}
-      />
+      <ThumbUp variant="primary" style={{ padding: '0.375rem 0.625rem' }} />
     }
   />
+);
+
+export const PillVariants = (args: PillProps) => (
+  <>
+    <div>
+      <Flex marginBottom="spacingXs">
+        <SectionHeading as="h3">Idle</SectionHeading>
+      </Flex>
+      <Pill
+        label={args.label}
+        onClose={args.onClose}
+        onDrag={args.onDrag}
+        variant="idle"
+      />
+    </div>
+    <div className="f36-margin-top--m">
+      <Flex marginBottom="spacingXs">
+        <SectionHeading as="h3">Active</SectionHeading>
+      </Flex>
+      <Pill
+        label={args.label}
+        onClose={args.onClose}
+        onDrag={args.onDrag}
+        variant="active"
+      />
+    </div>
+    <div className="f36-margin-top--m">
+      <Flex marginBottom="spacingXs">
+        <SectionHeading as="h3">Deleted</SectionHeading>
+      </Flex>
+      <Pill
+        label={args.label}
+        onClose={args.onClose}
+        onDrag={args.onDrag}
+        variant="deleted"
+      />
+    </div>
+  </>
 );
 
 basic.args = { label: 'example.user@contentful.com' };
@@ -63,6 +98,12 @@ onDragAndOnClose.args = {
 };
 
 CustomHandleComponent.args = {
+  label: 'example.user@contentful.com',
+  onClose: action('clicked'),
+  onDrag: action('dragged'),
+};
+
+PillVariants.args = {
   label: 'example.user@contentful.com',
   onClose: action('clicked'),
   onDrag: action('dragged'),

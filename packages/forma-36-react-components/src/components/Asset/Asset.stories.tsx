@@ -1,11 +1,10 @@
 import React from 'react';
 import type { Meta, Story } from '@storybook/react/types-6-0';
-
+import { Flex } from '@contentful/f36-core';
+import { SectionHeading, Paragraph } from '@contentful/f36-typography';
 import { Asset, types } from './Asset';
-import { Flex } from '../Flex';
-import { Paragraph, SectionHeading } from '../Typography';
+
 import type { AssetProps } from './Asset';
-import notes from './README.mdx';
 
 export default {
   argTypes: {
@@ -33,7 +32,6 @@ export default {
   component: Asset,
   parameters: {
     propTypes: Asset['__docgenInfo'],
-    notes,
   },
   title: 'Components/Asset',
 } as Meta;
@@ -63,7 +61,7 @@ export const overview: Story<AssetProps> = () => (
   <>
     <Flex flexDirection="column" marginBottom="spacingM">
       <Flex marginBottom="spacingS">
-        <SectionHeading element="h3">Asset status overview</SectionHeading>
+        <SectionHeading as="h3">Asset status overview</SectionHeading>
       </Flex>
       <Flex marginBottom="spacingS">
         <Flex flexDirection="column" marginRight="spacingS">
@@ -86,7 +84,7 @@ export const overview: Story<AssetProps> = () => (
     </Flex>
     <Flex flexDirection="column">
       <Flex marginBottom="spacingS">
-        <SectionHeading element="h3">Asset types overview</SectionHeading>
+        <SectionHeading as="h3">Asset types overview</SectionHeading>
       </Flex>
       <Flex marginBottom="spacingS">
         <Flex flexDirection="column" marginRight="spacingS">

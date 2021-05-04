@@ -1,11 +1,9 @@
 import React from 'react';
-
+import { SectionHeading } from '@contentful/f36-typography';
 import { Button } from '../Button';
 import { Notification, NotificationsAPI } from './Notification';
-import notes from './README.mdx';
 import { NotificationItem } from './NotificationItem';
-import { Flex } from '../Flex';
-import { SectionHeading } from '../Typography';
+import { Flex } from '@contentful/f36-core';
 
 let index = 0;
 const getUniqueNumber = () => {
@@ -18,7 +16,6 @@ export default {
   component: Notification,
   parameters: {
     propTypes: [Notification['__docgenInfo']],
-    notes,
   },
   argTypes: {
     className: { control: { disable: true } },
@@ -130,7 +127,7 @@ interface OverviewArgs extends NotificationsAPI {
 export const overview = ({ notificationText, ...args }: OverviewArgs) => (
   <Flex fullWidth flexDirection="column">
     <Flex marginBottom="spacingS">
-      <SectionHeading element="h3">Notifiaction success</SectionHeading>
+      <SectionHeading as="h3">Notifiaction success</SectionHeading>
     </Flex>
     <Flex marginBottom="spacingS">
       <NotificationItem {...args} intent="success">
@@ -138,7 +135,7 @@ export const overview = ({ notificationText, ...args }: OverviewArgs) => (
       </NotificationItem>
     </Flex>
     <Flex marginBottom="spacingS">
-      <SectionHeading element="h3">Notifiaction error</SectionHeading>
+      <SectionHeading as="h3">Notifiaction error</SectionHeading>
     </Flex>
     <Flex marginBottom="spacingS">
       <NotificationItem {...args} intent="error">
@@ -146,7 +143,7 @@ export const overview = ({ notificationText, ...args }: OverviewArgs) => (
       </NotificationItem>
     </Flex>
     <Flex marginBottom="spacingS">
-      <SectionHeading element="h3">Notifiaction warning</SectionHeading>
+      <SectionHeading as="h3">Notifiaction warning</SectionHeading>
     </Flex>
     <Flex marginBottom="spacingS">
       <NotificationItem {...args} intent="warning">
@@ -154,7 +151,7 @@ export const overview = ({ notificationText, ...args }: OverviewArgs) => (
       </NotificationItem>
     </Flex>
     <Flex marginBottom="spacingS">
-      <SectionHeading element="h3">
+      <SectionHeading as="h3">
         Notifiaction warning only with body
       </SectionHeading>
     </Flex>

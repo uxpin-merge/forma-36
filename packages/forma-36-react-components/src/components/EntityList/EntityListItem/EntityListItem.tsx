@@ -1,9 +1,10 @@
 import React, { useCallback } from 'react';
 import cn from 'classnames';
 import type { MouseEventHandler } from 'react';
-
 import { EntityStatusBadge } from '@contentful/f36-badge';
-import { Icon } from '../../Icon';
+import type { EntityStatus, PickUnion } from '@contentful/f36-core';
+import { Asset, Entry, Release } from '@contentful/f36-icons';
+
 import { CardActions, CardDragHandle, CardDragHandleProps } from '../../Card';
 import {
   SkeletonBodyText,
@@ -13,11 +14,10 @@ import {
 import { TabFocusTrap } from '@contentful/f36-utils';
 import styles from './EntityListItem.css';
 
-export type EntityListItemStatus =
-  | 'archived'
-  | 'changed'
-  | 'draft'
-  | 'published';
+type EntityListItemStatus = PickUnion<
+  EntityStatus,
+  'archived' | 'changed' | 'draft' | 'published'
+>;
 
 export interface EntityListItemProps {
   /**
@@ -35,7 +35,7 @@ export interface EntityListItemProps {
   /**
    * The publish status of the entry
    */
-  status?: 'archived' | 'changed' | 'draft' | 'published';
+  status?: EntityListItemStatus;
   /**
    * A boolean used to render the Thumbnail or not
    */
@@ -124,13 +124,13 @@ export function EntityListItem({
 }: EntityListItemProps): React.ReactElement {
   const renderIcon = useCallback(() => {
     const iconMap = {
-      asset: 'Asset',
-      entry: 'Entry',
-      release: 'Release',
+      asset: Asset,
+      entry: Entry,
+      release: Release,
     };
-    const icon = entityType ? iconMap[entityType.toLowerCase()] : 'Entry';
+    const Icon = entityType ? iconMap[entityType.toLowerCase()] : 'Entry';
 
-    return <Icon icon={icon} color="muted" />;
+    return <Icon variant="muted" />;
   }, [entityType]);
 
   const renderThumbnail = useCallback(() => {
@@ -143,7 +143,7 @@ export function EntityListItem({
     );
   }, [thumbnailAltText, thumbnailUrl]);
 
-  const renderStatus = useCallback((status: EntityListItemStatus) => {
+  const renderStatus = useCallback((status: EntityListItemProps['status']) => {
     return (
       <div className={styles['EntityListItem__status']}>
         <EntityStatusBadge entityStatus={status} />

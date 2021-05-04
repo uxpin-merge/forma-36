@@ -1,9 +1,10 @@
 import React from 'react';
+import tokens from '@contentful/f36-tokens';
+import { Flex } from '@contentful/f36-core';
+import { SectionHeading } from '@contentful/f36-typography';
 
 import { Badge } from '../src/Badge';
 import { BadgeProps } from '../src/Badge';
-import { SectionHeading } from '../../../forma-36-react-components/src/components/Typography/SectionHeading/SectionHeading';
-import { Flex } from '../../../forma-36-react-components/src/components/Flex/Flex';
 
 export default {
   title: 'Components/Badge',
@@ -14,12 +15,14 @@ export default {
   argTypes: {
     className: { control: { disable: true } },
     testId: { control: { disable: true } },
+    style: { control: { disable: true } },
   },
 };
 
 export const basic = (args: BadgeProps) => <Badge {...args} />;
 
 basic.args = {
+  size: 'default',
   variant: 'primary',
   children: 'Published',
 };
@@ -27,46 +30,92 @@ basic.args = {
 export const overview = () => (
   <>
     <Flex marginBottom="spacingS">
-      <SectionHeading element="h3">Badge types overview</SectionHeading>
+      <SectionHeading as="h3">Badge variants & sizes</SectionHeading>
     </Flex>
     <Flex marginBottom="spacingM" alignItems="center">
       <Flex marginRight="spacingS">
         <Badge variant="primary">primary</Badge>
+      </Flex>
+      <Flex marginRight="spacingS">
+        <Badge variant="primary" size="small">
+          primary
+        </Badge>
       </Flex>
     </Flex>
     <Flex marginBottom="spacingM" alignItems="center">
       <Flex marginRight="spacingS">
         <Badge variant="primary-filled">primary filled</Badge>
       </Flex>
+      <Flex marginRight="spacingS">
+        <Badge variant="primary-filled" size="small">
+          primary filled
+        </Badge>
+      </Flex>
     </Flex>
     <Flex marginBottom="spacingM" alignItems="center">
       <Flex marginRight="spacingS">
         <Badge variant="positive">positive</Badge>
+      </Flex>
+      <Flex marginRight="spacingS">
+        <Badge variant="positive" size="small">
+          positive
+        </Badge>
       </Flex>
     </Flex>
     <Flex marginBottom="spacingM" alignItems="center">
       <Flex marginRight="spacingS">
         <Badge variant="negative">negative</Badge>
       </Flex>
+      <Flex marginRight="spacingS">
+        <Badge variant="negative" size="small">
+          negative
+        </Badge>
+      </Flex>
     </Flex>
     <Flex marginBottom="spacingM" alignItems="center">
       <Flex marginRight="spacingS">
         <Badge variant="warning">warning</Badge>
       </Flex>
-    </Flex>
-
-    <Flex marginBottom="spacingS">
-      <SectionHeading element="h3">Tag sizes overview</SectionHeading>
-    </Flex>
-    <Flex marginBottom="spacingM" alignItems="center">
       <Flex marginRight="spacingS">
-        <Badge variant="muted">muted</Badge>
+        <Badge variant="warning" size="small">
+          warning
+        </Badge>
       </Flex>
     </Flex>
     <Flex marginBottom="spacingM" alignItems="center">
       <Flex marginRight="spacingS">
         <Badge variant="secondary">secondary</Badge>
       </Flex>
+      <Flex marginRight="spacingS">
+        <Badge variant="secondary" size="small">
+          secondary
+        </Badge>
+      </Flex>
+    </Flex>
+    <Flex marginBottom="spacingM" alignItems="center">
+      <Flex marginRight="spacingS">
+        <Badge variant="featured">featured</Badge>
+      </Flex>
+      <Flex marginRight="spacingS">
+        <Badge variant="featured" size="small">
+          featured
+        </Badge>
+      </Flex>
+    </Flex>
+    <Flex marginBottom="spacingM" alignItems="center">
+      <Flex marginRight="spacingS">
+        <Badge variant="muted">muted</Badge>
+      </Flex>
+      <Flex marginRight="spacingS">
+        <Badge variant="muted" size="small">
+          muted
+        </Badge>
+      </Flex>
+      <div style={{ color: tokens.colorRedBase, fontSize: tokens.fontSizeM }}>
+        {' '}
+        - this tagType is deprecated, please use <strong>secondary</strong>{' '}
+        instead
+      </div>
     </Flex>
   </>
 );

@@ -1,10 +1,11 @@
 import React from 'react';
+import { Flex } from '@contentful/f36-core';
+import { SectionHeading } from '@contentful/f36-typography';
+import { Clock } from '@contentful/f36-icons';
 
 import { EntryCard, EntryCardProps } from './EntryCard';
 import { CardDragHandle } from '../CardDragHandle/CardDragHandle';
 import { DropdownList, DropdownListItem } from '../../Dropdown';
-import { Flex } from '../../Flex';
-import { SectionHeading } from '../../Typography';
 
 export default {
   title: 'Components/Card/EntryCard',
@@ -39,7 +40,7 @@ export const Basic = (args: EntryCardProps) => <EntryCard {...args} />;
 
 Basic.args = {
   size: 'default',
-  statusIcon: 'Clock',
+  statusIcon: Clock,
   title: 'Closer',
   description:
     'Closer is the second and final studio album by English rock band Joy Division. It was released on 18 July 1980 on Factory Records, following the May 1980 suicide of lead singer Ian Curtis. The album was produced by Martin Hannett.',
@@ -78,7 +79,7 @@ WithThumbnailElement.args = {
 export const Overview = () => (
   <div>
     <Flex marginBottom="spacingS" marginTop="spacingM">
-      <SectionHeading element="h3">Entry Card published</SectionHeading>
+      <SectionHeading as="h3">Entry Card published</SectionHeading>
     </Flex>
     <EntryCard
       size="auto"
@@ -95,7 +96,7 @@ export const Overview = () => (
       dropdownListElements={dropdownElements}
     />
     <Flex marginBottom="spacingS" marginTop="spacingM">
-      <SectionHeading element="h3">Entry Card draft</SectionHeading>
+      <SectionHeading as="h3">Entry Card draft</SectionHeading>
     </Flex>
     <EntryCard
       size="auto"
@@ -112,7 +113,7 @@ export const Overview = () => (
       dropdownListElements={dropdownElements}
     />
     <Flex marginBottom="spacingS" marginTop="spacingM">
-      <SectionHeading element="h3">Entry Card changed</SectionHeading>
+      <SectionHeading as="h3">Entry Card changed</SectionHeading>
     </Flex>
     <EntryCard
       size="auto"
@@ -129,7 +130,7 @@ export const Overview = () => (
       dropdownListElements={dropdownElements}
     />
     <Flex marginBottom="spacingS" marginTop="spacingM">
-      <SectionHeading element="h3">Entry Card changed</SectionHeading>
+      <SectionHeading as="h3">Entry Card changed</SectionHeading>
     </Flex>
     <EntryCard
       size="auto"
@@ -146,7 +147,7 @@ export const Overview = () => (
       dropdownListElements={dropdownElements}
     />
     <Flex marginBottom="spacingS" marginTop="spacingM">
-      <SectionHeading element="h3">Entry Card changed</SectionHeading>
+      <SectionHeading as="h3">Entry Card changed</SectionHeading>
     </Flex>
     <EntryCard
       title="Closer"
@@ -164,18 +165,18 @@ export const Overview = () => (
       dropdownListElements={dropdownElements}
     />
     <Flex marginBottom="spacingS" marginTop="spacingM">
-      <SectionHeading element="h3">With Status icon</SectionHeading>
+      <SectionHeading as="h3">With Status icon</SectionHeading>
     </Flex>
     <EntryCard
       title="Closer"
       description="Closer is the second and final studio album by English rock band Joy Division. It was released on 18 July 1980 on Factory Records, following the May 1980 suicide of lead singer Ian Curtis. The album was produced by Martin Hannett.',"
       status="published"
-      statusIcon="Clock"
+      statusIcon={Clock}
       contentType="Album"
       dropdownListElements={dropdownElements}
     />
     <Flex marginBottom="spacingS" marginTop="spacingM">
-      <SectionHeading element="h3">Entry Card loading</SectionHeading>
+      <SectionHeading as="h3">Entry Card loading</SectionHeading>
     </Flex>
     <EntryCard
       title="Closer"

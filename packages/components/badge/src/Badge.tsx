@@ -1,36 +1,47 @@
 import React from 'react';
-import type { BadgeVariant } from './types';
-import { Container } from './Badge.styled';
+import { cx } from 'emotion';
+import { Box } from '@contentful/f36-core';
+import type { CommonProps } from '@contentful/f36-core';
 
-export interface BadgeProps {
+import type { BadgeSize, BadgeVariant } from './types';
+import { getBadgeStyles } from './getBadgeStyles';
+
+export interface BadgeProps extends CommonProps {
+  /**
+   * Sets the size of the component
+   * @default default
+   */
+  size?: BadgeSize;
+  /**
+   * Determines the variation of the component
+   * @default primary
+   */
   variant?: BadgeVariant;
-  style?: React.CSSProperties;
-  className?: string;
-  testId?: string;
+
   children: React.ReactNode;
 }
 
-function Badge(props: BadgeProps, ref: React.Ref<HTMLDivElement>) {
+const _Badge = (props: BadgeProps, ref: React.Ref<HTMLDivElement>) => {
   const {
-    className,
     children,
     variant = 'primary',
-    testId = 'cf-ui-badge',
+    size = 'default',
+    className,
     ...otherProps
   } = props;
 
   return (
-    <Container
-      className={className}
-      ref={ref}
-      data-test-id={testId}
-      variant={variant}
+    <Box
+      as="div"
+      testId="cf-ui-badge"
+      display="inline-block"
+      className={cx(getBadgeStyles({ variant, size }), className)}
       {...otherProps}
+      ref={ref}
     >
       {children}
-    </Container>
+    </Box>
   );
-}
+};
 
-const _Badge = React.forwardRef(Badge);
-export { _Badge as Badge };
+export const Badge = React.forwardRef(_Badge);

@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import '@contentful/f36-components/dist/styles.css';
 import '@contentful/forma-36-fcss/dist/styles.css';
-import { css } from '@emotion/core';
+import { css } from 'emotion';
 import Header from './Header';
 import Promo from './Promo';
 import Container from './Container';
@@ -52,37 +52,11 @@ const Layout = (props) => {
           }
         }
       }
-      allMdx {
-        nodes {
-          slug
-          body
-        }
-      }
     }
   `);
 
-  const dataFromReadme = {};
-
-  data.allMdx.nodes.forEach((item) => {
-    if (props.pageContext && props.pageContext.frontmatter.title) {
-      const arrFromSlug = item.slug.split('/');
-      const arrFromSlugLowercase = arrFromSlug.map((item) =>
-        item.toLowerCase(),
-      );
-
-      const trimmedTitle = props.pageContext.frontmatter.title
-        .replace(/\s/g, '')
-        .toLowerCase();
-
-      if (arrFromSlugLowercase.includes(trimmedTitle)) {
-        dataFromReadme[props.pageContext.frontmatter.title] = item.body;
-      }
-    }
-    return;
-  });
-
   return (
-    <div css={styles.test}>
+    <div className={styles.test}>
       <Helmet
         title={data.site.siteMetadata.title}
         meta={[
@@ -110,18 +84,15 @@ const Layout = (props) => {
 
       <Header />
 
-      <div css={styles.main}>
+      <div className={styles.main}>
         <Navigation
           menuItems={data.site.siteMetadata && data.site.siteMetadata.menuLinks}
           currentPath={props && props.location && props.location.pathname}
         />
         <Container
           frontmatter={props.pageContext && props.pageContext.frontmatter}
-          dataFromReadme={
-            props.pageContext
-              ? dataFromReadme[props.pageContext.frontmatter.title]
-              : null
-          }
+          dataFromReadme={props.pageContext && props.pageContext.body}
+          propsMetadata={props.pageContext && props.pageContext.propsMetadata}
         >
           {props.children}
         </Container>

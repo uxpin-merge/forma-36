@@ -1,16 +1,9 @@
-export type BadgeVariant =
-  | 'primary'
-  | 'primary-filled'
-  | 'positive'
-  | 'negative'
-  | 'warning'
-  | 'secondary'
-  | 'muted';
+import type { ComponentVariant } from '@contentful/f36-core';
 
-export type EntityStatus =
-  | 'published'
-  | 'draft'
-  | 'archived'
-  | 'changed'
-  | 'deleted'
-  | 'new';
+export type BadgeSize = 'default' | 'small';
+
+export type BadgeVariant =
+  | ComponentVariant
+  | 'muted'
+  | 'primary-filled'
+  | 'featured';

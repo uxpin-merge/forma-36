@@ -1,25 +1,23 @@
 import React, { useCallback } from 'react';
 import cn from 'classnames';
 import truncate from 'truncate';
+import { EntityStatusBadge } from '@contentful/f36-badge';
+import type { EntityStatus, PickUnion } from '@contentful/f36-core';
+import type { IconComponent } from '@contentful/f36-icon';
 
 import { Card, BaseCardProps, CardProps } from '../Card';
 import { CardActions } from '../CardActions/CardActions';
-import { EntityStatusBadge } from '@contentful/f36-badge';
-
 import { EntryCardSkeleton } from './EntryCardSkeleton';
 import {
   CardDragHandle,
   CardDragHandleProps,
 } from '../CardDragHandle/CardDragHandle';
-import { Icon, IconType } from '../../Icon';
 import styles from './EntryCard.css';
 
-export type EntryCardStatus =
-  | 'deleted'
-  | 'archived'
-  | 'changed'
-  | 'draft'
-  | 'published';
+type EntryCardStatus = PickUnion<
+  EntityStatus,
+  'deleted' | 'archived' | 'changed' | 'draft' | 'published'
+>;
 
 export type EntryCardSize = 'default' | 'small' | 'auto';
 
@@ -43,7 +41,7 @@ export interface EntryCardProps extends BaseCardProps {
   /**
    * An icon for the status of the entry
    */
-  statusIcon?: React.ReactNode;
+  statusIcon?: IconComponent;
   /**
    * The thumbnail of the entry
    */
@@ -89,7 +87,7 @@ export function EntryCard({
   description,
   contentType,
   status,
-  statusIcon,
+  statusIcon: StatusIcon,
   thumbnailElement,
   loading,
   dropdownListElements,
@@ -149,7 +147,7 @@ export function EntryCard({
     [],
   );
 
-  const renderStatus = useCallback((status: EntryCardStatus) => {
+  const renderStatus = useCallback((status: EntryCardProps['status']) => {
     return <EntityStatusBadge entityStatus={status} />;
   }, []);
 
@@ -208,14 +206,11 @@ export function EntryCard({
                 >
                   {contentType}
                 </div>
-                {statusIcon && typeof statusIcon === 'string' ? (
-                  <Icon
-                    icon={statusIcon as IconType}
-                    color="muted"
+                {StatusIcon && (
+                  <StatusIcon
                     className={styles['EntryCard__icon']}
+                    variant="muted"
                   />
-                ) : (
-                  statusIcon
                 )}
                 {status && renderStatus(status)}
                 {dropdownListElements && (

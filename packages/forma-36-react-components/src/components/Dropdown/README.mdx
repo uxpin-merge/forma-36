@@ -1,3 +1,12 @@
+---
+title: 'Dropdown'
+type: 'component'
+status: 'stable'
+slug: /components/dropdown/
+github: 'https://github.com/contentful/forma-36/tree/master/packages/forma-36-react-components/src/components/Dropdown'
+storybook: 'https://f36-storybook.contentful.com/?path=/story/components-dropdown--default'
+---
+
 Dropdowns allow users to access a list of multiple actions. A common use-case for Dropdowns is to build context menus.
 
 A Dropdown should contain at least one DropdownList, and multiple DropdownListItem components to represent each action.
@@ -18,7 +27,7 @@ A Dropdown should contain at least one DropdownList, and multiple DropdownListIt
 ## Code examples
 
 ```jsx
-// import { Button, Dropdown, DropdownList, DropdownListItem } from '@contentful/forma-36-react-components';
+// import { Button, Dropdown, DropdownList, DropdownListItem } from '@contentful/f36-components';
 
 function DropdownExample() {
   const [isOpen, setOpen] = React.useState(false);
@@ -53,7 +62,7 @@ function DropdownExample() {
 Dropdown with a title – Use a title to clarify the purpose of a dropdown.
 
 ```jsx
-// import { Button, Dropdown, DropdownList, DropdownListItem } from '@contentful/forma-36-react-components';
+// import { Button, Dropdown, DropdownList, DropdownListItem } from '@contentful/f36-components';
 
 function DropdownExample() {
   const [isOpen, setOpen] = React.useState(false);
@@ -89,7 +98,7 @@ function DropdownExample() {
 Dropdown with multiple DropdownLists – Use multiple DropdownLists to group actions together. A DropdownList can contain a border to visually separating these lists.
 
 ```jsx
-// import { Button, Dropdown, DropdownList, DropdownListItem } from '@contentful/forma-36-react-components';
+// import { Button, Dropdown, DropdownList, DropdownListItem } from '@contentful/f36-components';
 
 function DropdownExample() {
   const [isOpen, setOpen] = React.useState(false);
@@ -132,7 +141,7 @@ function DropdownExample() {
 Dropdown with links – DropdownListItems can also contain TextLinks. These are often used to highlight related actions to the content of the DropdownList.
 
 ```jsx
-// import { Button, Dropdown, DropdownList, DropdownListItem } from '@contentful/forma-36-react-components';
+// import { Button, Dropdown, DropdownList, DropdownListItem } from '@contentful/f36-components';
 
 function DropdownExample() {
   const [isOpen, setOpen] = React.useState(false);
@@ -170,7 +179,7 @@ function DropdownExample() {
 Dropdown with max height – DropdownLists can have a max height to limit the height of the dropdown and introduce scrolling. This should be used when dropdowns need to contain a lot of data.
 
 ```jsx
-// import { Button, Dropdown, DropdownList, DropdownListItem } from '@contentful/forma-36-react-components';
+// import { Button, Dropdown, DropdownList, DropdownListItem } from '@contentful/f36-components';
 
 function DropdownExample() {
   const [isOpen, setOpen] = React.useState(false);

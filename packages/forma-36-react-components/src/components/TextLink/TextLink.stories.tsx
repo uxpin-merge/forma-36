@@ -1,19 +1,17 @@
 import React from 'react';
-
-import { TextLink, textLinkColor } from './TextLink';
-import { Paragraph } from '../Typography';
+import { Paragraph } from '@contentful/f36-typography';
+import { Calendar, ChatBubble, Download } from '@contentful/f36-icons';
 import tokens from '@contentful/f36-tokens';
-import { Flex } from '../Flex';
+import { Flex } from '@contentful/f36-core';
 import '@contentful/forma-36-fcss/dist/styles.css';
 
-import notes from './README.mdx';
+import { TextLink, textLinkColor } from './TextLink';
 
 export default {
   title: 'Components/TextLink',
   component: TextLink,
   parameters: {
     propTypes: TextLink['__docgenInfo'],
-    notes,
   },
 };
 
@@ -78,7 +76,7 @@ export const overview = () => (
         </Flex>
         <Flex marginRight="spacingXl">
           <TextLink
-            icon="Calendar"
+            icon={Calendar}
             href="https://www.wikiwand.com/en/Potsdam"
             target="_blanck"
             linkType={color as any}
@@ -88,7 +86,7 @@ export const overview = () => (
         </Flex>
         <Flex marginRight="spacingXl">
           <TextLink
-            icon="Download"
+            icon={Download}
             iconPosition="right"
             href="https://www.wikiwand.com/en/Potsdam"
             target="_blanck"
@@ -99,7 +97,7 @@ export const overview = () => (
         </Flex>
         <Flex marginRight="spacingXl">
           <TextLink
-            icon="ChatBubble"
+            icon={ChatBubble}
             href="https://www.wikiwand.com/en/Potsdam"
             target="_blanck"
             linkType={color as any}

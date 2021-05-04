@@ -1,4 +1,29 @@
 export * from '@contentful/f36-badge';
+export { Icon } from '@contentful/f36-icon';
+export type {
+  IconComponent,
+  IconProps,
+  IconSize,
+  IconVariant,
+} from '@contentful/f36-icon';
+export { Flex, Grid, GridItem, Box } from '@contentful/f36-core';
+export type {
+  FlexProps,
+  GridProps,
+  GridItemProps,
+  BoxProps,
+  CommonProps,
+  MarginProps,
+  PaddingProps,
+  Spacing,
+} from '@contentful/f36-core';
+export { Spinner } from '@contentful/f36-spinner';
+export type { SpinnerProps } from '@contentful/f36-spinner';
+export * from '@contentful/f36-typography';
+export { ValidationMessage } from '@contentful/f36-validation-message';
+export type { ValidationMessageProps } from '@contentful/f36-validation-message';
+export { List, ListItem } from '@contentful/f36-list';
+export type { ListProps, ListItemProps } from '@contentful/f36-list';
 export * from './components/Accordion';
 export * from './components/Asset';
 export * from './components/Autocomplete';
@@ -15,14 +40,10 @@ export * from './components/EmptyState';
 export * from './components/Illustration';
 export * from './components/DateTime';
 export * from './components/EntityList';
-export * from './components/Flex';
 export * from './components/Form';
 export * from './components/FormLabel';
-export * from './components/Grid';
 export * from './components/HelpText';
-export * from './components/Icon';
 export * from './components/IconButton';
-export * from './components/List';
 export * from './components/Modal';
 export * from './components/Note';
 export * from './components/Notification';
@@ -32,7 +53,6 @@ export * from './components/RadioButtonField';
 export * from './components/Select';
 export * from './components/SelectField';
 export * from './components/Skeleton';
-export * from './components/Spinner';
 export * from './components/Switch';
 export * from './components/Table';
 export * from './components/Tabs';
@@ -42,8 +62,6 @@ export * from './components/TextInput';
 export * from './components/TextLink';
 export * from './components/ToggleButton';
 export * from './components/Tooltip';
-export * from './components/Typography';
-export * from './components/ValidationMessage';
 export * from './components/Workbench';
 
 // -- Add imports above this line (required by plopfile.js) --

@@ -1,17 +1,14 @@
 import React from 'react';
-
+import { SectionHeading, Paragraph } from '@contentful/f36-typography';
 import { Tooltip } from './Tooltip';
-import { Paragraph, SectionHeading } from '../Typography';
 import { TextLink } from '../TextLink';
-import { Flex } from '../Flex';
-import notes from './README.mdx';
+import { Flex } from '@contentful/f36-core';
 
 export default {
   title: 'Components/Tooltip',
   component: Tooltip,
   parameters: {
     propTypes: Tooltip['__docgenInfo'],
-    notes,
   },
   argTypes: {
     content: { control: 'text' },
@@ -187,7 +184,7 @@ export const Overview = () => {
   return (
     <>
       <Flex marginBottom="spacingS">
-        <SectionHeading element="h3">Tooltip disabled</SectionHeading>
+        <SectionHeading as="h3">Tooltip disabled</SectionHeading>
       </Flex>
       <Flex marginBottom="spacingS">
         <Tooltip content="I am a Tooltip 🙌" maxWidth={360} place="top">
@@ -198,7 +195,7 @@ export const Overview = () => {
       </Flex>
 
       <Flex marginBottom="spacingS">
-        <SectionHeading element="h3">Tooltip left</SectionHeading>
+        <SectionHeading as="h3">Tooltip left</SectionHeading>
       </Flex>
       <Flex marginBottom="spacingS">
         <Tooltip
@@ -214,7 +211,7 @@ export const Overview = () => {
       </Flex>
 
       <Flex marginBottom="spacingS">
-        <SectionHeading element="h3">Tooltip right</SectionHeading>
+        <SectionHeading as="h3">Tooltip right</SectionHeading>
       </Flex>
       <Flex marginBottom="spacingS">
         <Tooltip
@@ -229,7 +226,7 @@ export const Overview = () => {
         </Tooltip>
       </Flex>
       <Flex marginBottom="spacingS">
-        <SectionHeading element="h3">Tooltip top</SectionHeading>
+        <SectionHeading as="h3">Tooltip top</SectionHeading>
       </Flex>
       <Flex marginBottom="spacingS">
         <Tooltip
@@ -244,7 +241,7 @@ export const Overview = () => {
         </Tooltip>
       </Flex>
       <Flex marginBottom="spacingS">
-        <SectionHeading element="h3">Tooltip bottom</SectionHeading>
+        <SectionHeading as="h3">Tooltip bottom</SectionHeading>
       </Flex>
       <Flex marginBottom="spacingS">
         <Tooltip
