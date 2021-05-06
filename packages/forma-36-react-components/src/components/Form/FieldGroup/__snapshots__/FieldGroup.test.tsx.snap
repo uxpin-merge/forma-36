@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the component 1`] = `
+.emotion-5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-4 {
+  margin-bottom: 0;
+}
+
 .emotion-0 {
   display: inline-block;
   font-size: 0.875rem;
@@ -88,6 +99,8 @@ exports[`renders the component 1`] = `
   height: 1rem;
   min-height: 1rem;
   overflow: visible;
+  margin-right: 0.5rem !important;
+  margin-top: 0.25rem !important;
 }
 
 .emotion-1 {
@@ -115,11 +128,11 @@ exports[`renders the component 1`] = `
     class="FieldGroup__item"
   >
     <div
-      class="ControlledInputField"
+      class="emotion-5"
       data-test-id="cf-ui-checkbox-field"
     >
       <div
-        class="ControlledInputField__input emotion-3"
+        class="emotion-3"
         data-test-id="cf-ui-controlled-input"
       >
         <input
@@ -148,14 +161,14 @@ exports[`renders the component 1`] = `
       </div>
       <div>
         <label
-          class="FormLabel ControlledInputField__label"
+          class="FormLabel__FormLabel___3d6zQ emotion-4"
           data-test-id="cf-ui-form-label"
           for="agree"
         >
           Do you agree?
         </label>
         <p
-          class="ControlledInputField__help-text emotion-4"
+          class="HelpText__HelpText___uWbja"
           data-test-id="cf-ui-help-text"
         >
           Click if you agree
@@ -167,11 +180,11 @@ exports[`renders the component 1`] = `
     class="FieldGroup__item"
   >
     <div
-      class="ControlledInputField"
+      class="emotion-5"
       data-test-id="cf-ui-checkbox-field"
     >
       <div
-        class="ControlledInputField__input emotion-3"
+        class="emotion-3"
         data-test-id="cf-ui-controlled-input"
       >
         <input
@@ -200,14 +213,14 @@ exports[`renders the component 1`] = `
       </div>
       <div>
         <label
-          class="FormLabel ControlledInputField__label"
+          class="FormLabel__FormLabel___3d6zQ emotion-4"
           data-test-id="cf-ui-form-label"
           for="reallyAgree"
         >
           Do you really agree?
         </label>
         <p
-          class="ControlledInputField__help-text emotion-4"
+          class="HelpText__HelpText___uWbja"
           data-test-id="cf-ui-help-text"
         >
           Click if you really agree
@@ -219,6 +232,17 @@ exports[`renders the component 1`] = `
 `;
 
 exports[`renders the component children in a row 1`] = `
+.emotion-5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-4 {
+  margin-bottom: 0;
+}
+
 .emotion-0 {
   display: inline-block;
   font-size: 0.875rem;
@@ -306,6 +330,8 @@ exports[`renders the component children in a row 1`] = `
   height: 1rem;
   min-height: 1rem;
   overflow: visible;
+  margin-right: 0.5rem !important;
+  margin-top: 0.25rem !important;
 }
 
 .emotion-1 {
@@ -333,11 +359,11 @@ exports[`renders the component children in a row 1`] = `
     class="FieldGroup__item"
   >
     <div
-      class="ControlledInputField"
+      class="emotion-5"
       data-test-id="cf-ui-checkbox-field"
     >
       <div
-        class="ControlledInputField__input emotion-3"
+        class="emotion-3"
         data-test-id="cf-ui-controlled-input"
       >
         <input
@@ -366,14 +392,14 @@ exports[`renders the component children in a row 1`] = `
       </div>
       <div>
         <label
-          class="FormLabel ControlledInputField__label"
+          class="FormLabel__FormLabel___3d6zQ emotion-4"
           data-test-id="cf-ui-form-label"
           for="agree"
         >
           Do you agree?
         </label>
         <p
-          class="ControlledInputField__help-text emotion-4"
+          class="HelpText__HelpText___uWbja"
           data-test-id="cf-ui-help-text"
         >
           Click if you agree
@@ -385,11 +411,11 @@ exports[`renders the component children in a row 1`] = `
     class="FieldGroup__item"
   >
     <div
-      class="ControlledInputField"
+      class="emotion-5"
       data-test-id="cf-ui-checkbox-field"
     >
       <div
-        class="ControlledInputField__input emotion-3"
+        class="emotion-3"
         data-test-id="cf-ui-controlled-input"
       >
         <input
@@ -418,14 +444,14 @@ exports[`renders the component children in a row 1`] = `
       </div>
       <div>
         <label
-          class="FormLabel ControlledInputField__label"
+          class="FormLabel__FormLabel___3d6zQ emotion-4"
           data-test-id="cf-ui-form-label"
           for="reallyAgree"
         >
           Do you really agree?
         </label>
         <p
-          class="ControlledInputField__help-text emotion-4"
+          class="HelpText__HelpText___uWbja"
           data-test-id="cf-ui-help-text"
         >
           Click if you really agree
@@ -437,6 +463,17 @@ exports[`renders the component children in a row 1`] = `
 `;
 
 exports[`renders the component with an additional class name 1`] = `
+.emotion-5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-4 {
+  margin-bottom: 0;
+}
+
 .emotion-0 {
   display: inline-block;
   font-size: 0.875rem;
@@ -524,6 +561,8 @@ exports[`renders the component with an additional class name 1`] = `
   height: 1rem;
   min-height: 1rem;
   overflow: visible;
+  margin-right: 0.5rem !important;
+  margin-top: 0.25rem !important;
 }
 
 .emotion-1 {
@@ -551,11 +590,11 @@ exports[`renders the component with an additional class name 1`] = `
     class="FieldGroup__item"
   >
     <div
-      class="ControlledInputField"
+      class="emotion-5"
       data-test-id="cf-ui-checkbox-field"
     >
       <div
-        class="ControlledInputField__input emotion-3"
+        class="emotion-3"
         data-test-id="cf-ui-controlled-input"
       >
         <input
@@ -584,14 +623,14 @@ exports[`renders the component with an additional class name 1`] = `
       </div>
       <div>
         <label
-          class="FormLabel ControlledInputField__label"
+          class="FormLabel__FormLabel___3d6zQ emotion-4"
           data-test-id="cf-ui-form-label"
           for="agree"
         >
           Do you agree?
         </label>
         <p
-          class="ControlledInputField__help-text emotion-4"
+          class="HelpText__HelpText___uWbja"
           data-test-id="cf-ui-help-text"
         >
           Click if you agree
@@ -603,11 +642,11 @@ exports[`renders the component with an additional class name 1`] = `
     class="FieldGroup__item"
   >
     <div
-      class="ControlledInputField"
+      class="emotion-5"
       data-test-id="cf-ui-checkbox-field"
     >
       <div
-        class="ControlledInputField__input emotion-3"
+        class="emotion-3"
         data-test-id="cf-ui-controlled-input"
       >
         <input
@@ -636,14 +675,14 @@ exports[`renders the component with an additional class name 1`] = `
       </div>
       <div>
         <label
-          class="FormLabel ControlledInputField__label"
+          class="FormLabel__FormLabel___3d6zQ emotion-4"
           data-test-id="cf-ui-form-label"
           for="reallyAgree"
         >
           Do you really agree?
         </label>
         <p
-          class="ControlledInputField__help-text emotion-4"
+          class="HelpText__HelpText___uWbja"
           data-test-id="cf-ui-help-text"
         >
           Click if you really agree
