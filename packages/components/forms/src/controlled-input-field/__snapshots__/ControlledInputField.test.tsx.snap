@@ -131,7 +131,7 @@ exports[`renders the component 1`] = `
   </div>
   <div>
     <label
-      class="FormLabel ControlledInputField__label"
+      class="FormLabel__FormLabel___3d6zQ ControlledInputField__label"
       data-test-id="cf-ui-form-label"
       for="checkbox"
     >
@@ -273,7 +273,7 @@ exports[`renders the component as checked 1`] = `
   </div>
   <div>
     <label
-      class="FormLabel ControlledInputField__label"
+      class="FormLabel__FormLabel___3d6zQ ControlledInputField__label"
       data-test-id="cf-ui-form-label"
       for="checkbox"
     >
@@ -415,13 +415,13 @@ exports[`renders the component as required 1`] = `
   </div>
   <div>
     <label
-      class="FormLabel ControlledInputField__label"
+      class="FormLabel__FormLabel___3d6zQ ControlledInputField__label"
       data-test-id="cf-ui-form-label"
       for="checkbox"
     >
       Label Text
       <span
-        class="FormLabel__required-text"
+        class="FormLabel__FormLabel__required-text___3mvdm"
       >
         (
         required
@@ -565,7 +565,7 @@ exports[`renders the component in a disabled state 1`] = `
   </div>
   <div>
     <label
-      class="FormLabel ControlledInputField__label"
+      class="FormLabel__FormLabel___3d6zQ ControlledInputField__label"
       data-test-id="cf-ui-form-label"
       for="checkbox"
     >
@@ -716,14 +716,14 @@ exports[`renders the component with a help text 1`] = `
   </div>
   <div>
     <label
-      class="FormLabel ControlledInputField__label"
+      class="FormLabel__FormLabel___3d6zQ ControlledInputField__label"
       data-test-id="cf-ui-form-label"
       for="checkbox"
     >
       Label Text
     </label>
     <p
-      class="ControlledInputField__help-text emotion-4"
+      class="HelpText__HelpText___uWbja ControlledInputField__help-text"
       data-test-id="cf-ui-help-text"
     >
       Help Text
@@ -898,7 +898,7 @@ exports[`renders the component with a light label variation 1`] = `
   </div>
   <div>
     <label
-      class="FormLabel ControlledInputField__label ControlledInputField__label--light"
+      class="FormLabel__FormLabel___3d6zQ ControlledInputField__label ControlledInputField__label--light"
       data-test-id="cf-ui-form-label"
       for="checkbox"
     >
@@ -1100,7 +1100,7 @@ exports[`renders the component with a validation message 1`] = `
   </div>
   <div>
     <label
-      class="FormLabel ControlledInputField__label"
+      class="FormLabel__FormLabel___3d6zQ ControlledInputField__label"
       data-test-id="cf-ui-form-label"
       for="checkbox"
     >
@@ -1267,7 +1267,7 @@ exports[`renders the component with a value 1`] = `
   </div>
   <div>
     <label
-      class="FormLabel ControlledInputField__label"
+      class="FormLabel__FormLabel___3d6zQ ControlledInputField__label"
       data-test-id="cf-ui-form-label"
       for="checkbox"
     >
@@ -1408,7 +1408,7 @@ exports[`renders the component with an additional class name 1`] = `
   </div>
   <div>
     <label
-      class="FormLabel ControlledInputField__label"
+      class="FormLabel__FormLabel___3d6zQ ControlledInputField__label"
       data-test-id="cf-ui-form-label"
       for="checkbox"
     >
