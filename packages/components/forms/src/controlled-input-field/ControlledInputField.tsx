@@ -22,7 +22,18 @@ export interface ControlledInputFieldProps extends CommonProps {
   value?: string;
   name?: string;
   isChecked?: boolean;
-  inputProps?: ControlledInputProps;
+  inputProps?: Omit<
+    ControlledInputProps,
+    | 'id'
+    | 'label'
+    | 'name'
+    | 'isRequired'
+    | 'isChecked'
+    | 'isDisabled'
+    | 'value'
+    | 'onChange'
+    | 'type'
+  >;
   inputType?: 'radio' | 'checkbox';
   onChange?: EventHandler<ChangeEvent<HTMLInputElement>>;
   className?: string;
@@ -78,13 +89,13 @@ export const _ControlledInputField = (
       <ControlledInput
         id={id}
         label={label}
-        type={inputType}
         name={name}
         isRequired={isRequired}
         isChecked={isChecked}
         isDisabled={isDisabled}
         value={value}
         onChange={onChange}
+        type={inputType}
         {...inputProps}
         className={inputClassNames}
       />
