@@ -2,10 +2,13 @@ import React from 'react';
 import { ControlledInputField } from '../controlled-input-field';
 import type { ControlledInputFieldProps } from '../controlled-input-field';
 
-export type CheckboxFieldProps = Omit<ControlledInputFieldProps, 'inputType'>;
+export type RadioButtonFieldProps = Omit<
+  ControlledInputFieldProps,
+  'inputType'
+>;
 
-export const _CheckboxField = (
-  { testId = 'cf-ui-checkbox-field', ...otherProps }: CheckboxFieldProps,
+export const _RadioButtonField = (
+  { testId = 'cf-ui-radio-button-field', ...otherProps }: RadioButtonFieldProps,
   ref: React.Ref<HTMLDivElement>,
 ) => {
   return (
@@ -13,9 +16,9 @@ export const _CheckboxField = (
       testId={testId}
       {...otherProps}
       ref={ref}
-      inputType="checkbox"
+      inputType="radio"
     />
   );
 };
 
-export const CheckboxField = React.forwardRef(_CheckboxField);
+export const RadioButtonField = React.forwardRef(_RadioButtonField);
