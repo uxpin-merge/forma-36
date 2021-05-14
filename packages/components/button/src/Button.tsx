@@ -11,7 +11,7 @@ import { Spinner } from '@contentful/f36-spinner';
 export interface ButtonProps
   extends Omit<HTMLProps<HTMLButtonElement & HTMLAnchorElement>, 'size'>,
     CommonProps {
-  children?: React.ReactNode;
+  children?: string;
   /**
    * Determines style variation of Button component
    * @default secondary
