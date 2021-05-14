@@ -6,8 +6,6 @@ module.exports = {
         include: [
           'packages/components/icon/src/Icon.tsx',
           'packages/components/button/src/Button.tsx',
-          'packages/components/datepicker/src/Datepicker.tsx',
-          'packages/components/spinner/src/Spinner.tsx',
         ],
       },
     ],
