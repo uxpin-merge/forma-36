@@ -155,7 +155,7 @@
     "yarn": ">=1.21.0"
   },
   "dependencies": {
-    "@uxpin/merge-cli": "2.7.5-dev.37",
+    "@uxpin/merge-cli": "^2.7.6",
     "awesome-typescript-loader": "^5.2.1"
   }
 }
