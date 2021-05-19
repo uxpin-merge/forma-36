@@ -2,10 +2,18 @@ module.exports = {
   components: {
     categories: [
       {
-        name: 'General',
+        name: 'Form',
+        include: ['packages/components/button/src/Button.tsx'],
+      },
+      {
+        name: 'Icon',
         include: [
           'packages/components/icon/src/Icon.tsx',
-          'packages/components/button/src/Button.tsx',
+          'packages/components/icons/src/ArrowDown.tsx',
+          'packages/components/icons/src/Calendar.tsx',
+          'packages/components/icons/src/ChatBubble.tsx',
+          'packages/components/icons/src/Clock.tsx',
+          'packages/components/icons/src/Code.tsx',
         ],
       },
     ],
