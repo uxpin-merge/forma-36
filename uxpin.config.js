@@ -2,6 +2,10 @@ module.exports = {
   components: {
     categories: [
       {
+        name: 'Typography',
+        include: ['packages/components/typography/src/DisplayText.tsx'],
+      },
+      {
         name: 'Form',
         include: ['packages/components/button/src/Button.tsx'],
       },
@@ -14,6 +18,12 @@ module.exports = {
           'packages/components/icons/src/ChatBubble.tsx',
           'packages/components/icons/src/Clock.tsx',
           'packages/components/icons/src/Code.tsx',
+        ],
+      },
+      {
+        name: 'Components',
+        include: [
+          'packages/forma-36-react-components/src/components/Note/Note.tsx',
         ],
       },
     ],
