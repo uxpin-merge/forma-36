@@ -6,10 +6,6 @@ module.exports = {
         include: ['packages/components/typography/src/DisplayText.tsx'],
       },
       {
-        name: 'Form',
-        include: ['packages/components/button/src/Button.tsx'],
-      },
-      {
         name: 'Icon',
         include: [
           'packages/components/icon/src/Icon.tsx',
@@ -21,9 +17,23 @@ module.exports = {
         ],
       },
       {
-        name: 'Components',
+        name: 'Components V4',
         include: [
+          'packages/components/button/src/Button.tsx',
+          'packages/components/inputs/src/checkbox/Checkbox.tsx',
+        ],
+      },
+      {
+        name: 'Components V3',
+        include: [
+          'packages/forma-36-react-components/src/components/TextField/TextField.tsx',
+          'packages/forma-36-react-components/src/components/Tooltip/Tooltip.tsx',
+          'packages/forma-36-react-components/src/components/Dropdown/Dropdown.tsx',
+          'packages/forma-36-react-components/src/components/Switch/Switch.tsx',
           'packages/forma-36-react-components/src/components/Note/Note.tsx',
+          'packages/forma-36-react-components/src/components/Card/Card.tsx',
+          'packages/forma-36-react-components/src/components/Tabs/Tabs.tsx',
+          'packages/forma-36-react-components/src/components/Modal/Modal.tsx',
         ],
       },
     ],
