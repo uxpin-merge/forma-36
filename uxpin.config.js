@@ -21,6 +21,7 @@ module.exports = {
         include: [
           'packages/components/button/src/Button.tsx',
           'packages/components/inputs/src/checkbox/Checkbox.tsx',
+          'packages/components/spinner/src/Spinner.tsx',
         ],
       },
       {
