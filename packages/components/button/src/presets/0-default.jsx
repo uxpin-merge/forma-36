@@ -6,12 +6,7 @@ export default (
     uxpId="button-1"
     variant="primary"
     size="medium"
-    // isActive={false}
-    // disabled={false}
     type="default"
-    // isDropdown={false}
-    // icon={() => {}}
-    // isLoading={false}
     isFullWidth={true}
   >
     Submit
