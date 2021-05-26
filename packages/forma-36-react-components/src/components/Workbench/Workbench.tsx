@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react'
 import cn from 'classnames';
 import type { ReactElement } from 'react';
 import { Heading } from '@contentful/f36-typography';
@@ -94,7 +94,7 @@ export function WorkbenchHeader({
 WorkbenchHeader.displayName = 'Workbench.Header';
 
 export interface WorkbenchSidebarProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   className?: string;
   position?: 'left' | 'right';
   testId?: string;
@@ -124,7 +124,7 @@ export function WorkbenchSidebar({
 }
 
 export interface WorkbenchContentProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   type?: 'default' | 'text' | 'full';
   className?: string;
   testId?: string;
@@ -162,7 +162,7 @@ export interface WorkbenchProps {
   /**
    * Child nodes to be rendered in the component
    */
-  children?: React.ReactNode;
+  children?: ReactNode;
   /**
    * An ID used for testing purposes applied as a data attribute (data-test-id)
    */
@@ -176,8 +176,8 @@ export function Workbench({
   ...otherProps
 }: WorkbenchProps): ReactElement {
   const childrenArray = React.Children.toArray(children);
-  const header: React.ReactNode[] = [];
-  const other: React.ReactNode[] = [];
+  const header: ReactNode[] = [];
+  const other: ReactNode[] = [];
   childrenArray.forEach(
     // eslint-disable-next-line
     (item: any) => {

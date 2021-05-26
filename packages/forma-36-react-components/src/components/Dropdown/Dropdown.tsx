@@ -1,4 +1,4 @@
-import React, { RefObject, useCallback, useEffect, useState } from 'react';
+import React, { RefObject, useCallback, useEffect, useState, ReactNode } from 'react';
 import cn from 'classnames';
 import { usePopper } from 'react-popper';
 import { Modifier, Placement, State as PopperState } from '@popperjs/core';
@@ -80,7 +80,7 @@ export interface DropdownProps {
   /**
    * Child nodes to be rendered in the component
    */
-  children: React.ReactNode;
+  children: ReactNode;
   /**
    * Class names to be appended to the className prop of the Dropdown wrapper
    */
