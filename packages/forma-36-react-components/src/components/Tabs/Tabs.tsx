@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import cn from 'classnames';
 import type { CSSProperties } from 'react';
 
@@ -11,7 +11,7 @@ export interface TabsProps {
   style?: CSSProperties;
   className?: string;
   withDivider?: boolean;
-  children?: React.ReactNode;
+  children?: ReactNode;
   testId?: string;
 }
 

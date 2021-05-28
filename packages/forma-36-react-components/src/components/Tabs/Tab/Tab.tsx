@@ -2,7 +2,7 @@ import React, { useCallback, ReactNode } from 'react';
 import classNames from 'classnames';
 import type { CSSProperties, KeyboardEvent, MouseEvent } from 'react';
 
-import styles from './Tabs.css';
+import styles from '../Tabs.css';
 
 export interface TabProps {
   id: string;
