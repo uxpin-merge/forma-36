@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode} from 'react';
 import { cx } from 'emotion';
 import { Box } from '@contentful/f36-core';
 import type { CommonProps } from '@contentful/f36-core';
@@ -18,7 +18,7 @@ export interface BadgeProps extends CommonProps {
    */
   variant?: BadgeVariant;
 
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const _Badge = (props: BadgeProps, ref: React.Ref<HTMLDivElement>) => {
