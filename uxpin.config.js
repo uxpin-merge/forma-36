@@ -3,17 +3,24 @@ module.exports = {
     categories: [
       {
         name: 'Typography',
-        include: ['packages/components/typography/src/DisplayText.tsx'],
+        include: [
+          'packages/components/typography/src/DisplayText.tsx',
+          'packages/components/headingM/HeadingM.tsx',
+          'packages/components/paragraphM/ParagraphM.tsx',
+          'packages/components/sectionHeadingM/SectionHeadingM.tsx',
+          'packages/components/subheadingM/SubheadingM.tsx',
+        ],
       },
       {
         name: 'Icon',
+        include: ['packages/components/iconM/IconM.tsx'],
+      },
+      {
+        name: 'Form elements',
         include: [
-          'packages/components/icon/src/Icon.tsx',
-          'packages/components/icons/src/ArrowDown.tsx',
-          'packages/components/icons/src/Calendar.tsx',
-          'packages/components/icons/src/ChatBubble.tsx',
-          'packages/components/icons/src/Clock.tsx',
-          'packages/components/icons/src/Code.tsx',
+          'packages/forma-36-react-components/src/components/TextField/TextField.tsx',
+          'packages/forma-36-react-components/src/components/CheckboxField/CheckboxField.tsx',
+          'packages/forma-36-react-components/src/components/RadioButtonField/RadioButtonField.tsx',
         ],
       },
       {
@@ -21,8 +28,8 @@ module.exports = {
         include: [
           'packages/components/badge/src/Badge.tsx',
           'packages/components/button/src/Button.tsx',
-          'packages/components/inputs/src/checkbox/Checkbox.tsx',
-          'packages/components/inputs/src/radio-button/RadioButton.tsx',
+          // 'packages/components/inputs/src/checkbox/Checkbox.tsx',
+          // 'packages/components/inputs/src/radio-button/RadioButton.tsx',
           'packages/components/spinner/src/Spinner.tsx',
           'packages/components/validation-message/src/ValidationMessage.tsx',
         ],
@@ -30,7 +37,6 @@ module.exports = {
       {
         name: 'Components V3',
         include: [
-          'packages/forma-36-react-components/src/components/TextField/TextField.tsx',
           'packages/forma-36-react-components/src/components/Tooltip/Tooltip.tsx',
           // 'packages/forma-36-react-components/src/components/Dropdown/Dropdown.tsx',
           'packages/forma-36-react-components/src/components/Switch/Switch.tsx',
