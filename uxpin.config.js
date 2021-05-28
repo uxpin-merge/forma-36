@@ -19,6 +19,7 @@ module.exports = {
       {
         name: 'Components V4',
         include: [
+          'packages/components/badge/src/Badge.tsx',
           'packages/components/button/src/Button.tsx',
           'packages/components/inputs/src/checkbox/Checkbox.tsx',
           'packages/components/inputs/src/radio-button/RadioButton.tsx',
