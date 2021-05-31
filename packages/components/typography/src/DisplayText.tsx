@@ -14,6 +14,7 @@ const DEFAULT_TAG = 'h1';
 
 export interface DisplayTextInternalProps extends HeadingInternalProps {
   size?: 'default' | 'large' | 'huge';
+  children?: string;
 }
 
 export type DisplayTextProps<

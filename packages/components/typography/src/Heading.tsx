@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, ReactNode } from 'react';
 import tokens from '@contentful/f36-tokens';
 import { css, cx } from 'emotion';
 import {
@@ -24,7 +24,7 @@ export type HeadingElement =
 
 export interface HeadingInternalProps extends CommonProps, MarginProps {
   as?: HeadingElement;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 export type HeadingProps<
