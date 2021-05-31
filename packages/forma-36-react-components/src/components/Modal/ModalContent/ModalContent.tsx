@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import cn from 'classnames';
 
 import styles from './ModalContent.css';
@@ -6,7 +6,7 @@ import styles from './ModalContent.css';
 export interface ModalContentProps {
   testId?: string;
   className?: string;
-  children: React.ReactNode;
+  children: ReactNode;
   style?: React.CSSProperties;
 }
 

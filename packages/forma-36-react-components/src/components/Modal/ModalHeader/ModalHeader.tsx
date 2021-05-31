@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties, ReactElement} from 'react';
 import cn from 'classnames';
 import { Close } from '@contentful/f36-icons';
 
@@ -11,7 +11,7 @@ export interface ModalHeaderProps {
   testId?: string;
   className?: string;
   isNotWrapped?: boolean;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 }
 
 export function ModalHeader({
@@ -21,7 +21,7 @@ export function ModalHeader({
   isNotWrapped,
   className,
   ...otherProps
-}: ModalHeaderProps): React.ReactElement {
+}: ModalHeaderProps): ReactElement {
   const titleClassNames = cn(styles.ModalHeader__title, {
     [styles['ModalHeader__title--is-not-wrapped']]: isNotWrapped,
   });

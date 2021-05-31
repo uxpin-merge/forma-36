@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import cn from 'classnames';
 
 import styles from './ModalControls.css';
@@ -6,7 +6,7 @@ import styles from './ModalControls.css';
 export interface ModalControlsProps {
   testId?: string;
   className?: string;
-  children: React.ReactNode;
+  children: ReactNode;
   style?: React.CSSProperties;
   position?: 'left' | 'right';
 }
