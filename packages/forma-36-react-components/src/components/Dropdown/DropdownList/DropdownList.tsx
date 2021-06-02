@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { ReactNode, RefObject} from 'react';
 import cn from 'classnames';
 import type * as CSS from 'csstype';
 
 import cssStyles from './DropdownList.css';
 
 export interface DropdownListProps {
-  children: React.ReactNode;
-  listRef?: React.RefObject<HTMLUListElement>;
+  children: ReactNode;
+  listRef?: RefObject<HTMLUListElement>;
   className?: string;
   testId?: string;
   border?: 'top' | 'bottom';

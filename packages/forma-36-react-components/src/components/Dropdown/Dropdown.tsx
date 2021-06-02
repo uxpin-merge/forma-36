@@ -1,4 +1,4 @@
-import React, { RefObject, useCallback, useEffect, useState, ReactNode } from 'react';
+import React, { RefObject, useCallback, useEffect, useState, ReactNode, ReactElement, cloneElement } from 'react';
 import cn from 'classnames';
 import { usePopper } from 'react-popper';
 import { Modifier, Placement, State as PopperState } from '@popperjs/core';
@@ -125,7 +125,7 @@ export interface DropdownProps {
   /**
    * React element to use as the toggle, opening and closing the Dropdown
    */
-  toggleElement?: React.ReactElement;
+  toggleElement?: ReactElement;
   /**
    * Boolean to control whether or not to render the dropdown in a React Portal.
    * Rendering content inside a Portal allows the dropdown to escape the bounds
@@ -281,7 +281,7 @@ export function Dropdown({
       {...otherProps}
     >
       {toggleElement &&
-        React.cloneElement(toggleElement, {
+        cloneElement(toggleElement, {
           'aria-haspopup': 'menu',
           'aria-expanded': isOpen,
         })}

@@ -38,7 +38,9 @@ module.exports = {
         name: 'Components V3',
         include: [
           'packages/forma-36-react-components/src/components/Tooltip/Tooltip.tsx',
-          // 'packages/forma-36-react-components/src/components/Dropdown/Dropdown.tsx',
+          'packages/forma-36-react-components/src/components/Dropdown/Dropdown.tsx',
+          'packages/forma-36-react-components/src/components/Dropdown/DropdownList/DropdownList.tsx',
+          'packages/forma-36-react-components/src/components/Dropdown/DropdownListItem/DropdownListItem.tsx',
           'packages/forma-36-react-components/src/components/Switch/Switch.tsx',
           'packages/forma-36-react-components/src/components/Note/Note.tsx',
           'packages/forma-36-react-components/src/components/Card/Card.tsx',

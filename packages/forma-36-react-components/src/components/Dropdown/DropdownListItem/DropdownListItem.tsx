@@ -3,6 +3,11 @@ import React, {
   MouseEventHandler,
   FocusEventHandler,
   useCallback,
+  ReactNode,
+  HTMLAttributes,
+  MutableRefObject,
+  Dispatch,
+  SetStateAction
 } from 'react';
 import cn from 'classnames';
 
@@ -10,12 +15,12 @@ import { TabFocusTrap } from '@contentful/f36-utils';
 import styles from './DropdownListItem.css';
 
 export interface DropdownListItemProps
-  extends React.HTMLAttributes<HTMLElement> {
+  extends HTMLAttributes<HTMLElement> {
   isDisabled?: boolean;
-  listItemRef?: React.MutableRefObject<HTMLLIElement | null>;
+  listItemRef?: MutableRefObject<HTMLLIElement | null>;
   isActive?: boolean;
   isTitle?: boolean;
-  children: React.ReactNode;
+  children: ReactNode;
   onClick?: MouseEventHandler;
   onMouseDown?: MouseEventHandler;
   submenuToggleLabel?: string;
@@ -42,8 +47,8 @@ export const DropdownListItem = forwardRef<HTMLElement, DropdownListItemProps>(
   ) {
     // We're not dealing with React RefObjects but with useState (because we
     // want to re-render on all changes)
-    const setReference = refCallback as React.Dispatch<
-      React.SetStateAction<HTMLLIElement | null>
+    const setReference = refCallback as Dispatch<
+      SetStateAction<HTMLLIElement | null>
     >;
 
     const renderSubmenuToggle = useCallback(() => {
