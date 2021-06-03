@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useRef, useState, ReactNode } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { Copy } from '@contentful/f36-icons';
 
@@ -11,11 +11,17 @@ import styles from './CopyButton.css';
 export interface CopyButtonProps {
   copyValue?: string;
   onCopy?: (value: string) => void;
+  /**
+   * @uxpinignoreprop
+   */
   className?: string;
+  /**
+   * @uxpinignoreprop
+   */
   testId?: string;
   tooltipPlace?: TooltipPlace;
-  tooltipText?: React.ReactNode;
-  tooltipCopiedText?: React.ReactNode;
+  tooltipText?: ReactNode;
+  tooltipCopiedText?: ReactNode;
 }
 
 export function CopyButton({

@@ -5,8 +5,10 @@ export default (
   <Spinner
     uxpId="spinner-1"
     variant="default"
-    customSize={1}
+    customSize={10}
     size="medium"
     display="-moz-initial"
-  >Put Spinner contents here</Spinner>
+  >
+    Put Spinner contents here
+  </Spinner>
 );

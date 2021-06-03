@@ -3,14 +3,19 @@ import type { CSSProperties } from 'react';
 
 export type CommonProps = {
   /**
+   * @uxpinignoreprop
    * CSS class to be appended to the root element
    */
   className?: string;
   /**
+   * @uxpinignoreprop
    * A [data-test-id] attribute used for testing purposes
    */
   testId?: string;
-  /** Accepts a JavaScript object with camelCased properties rather than a CSS string */
+  /**
+   * @uxpinignoreprop
+   * Accepts a JavaScript object with camelCased properties rather than a CSS string
+   * */
   style?: CSSProperties;
 };
 

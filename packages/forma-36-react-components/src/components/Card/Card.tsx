@@ -21,10 +21,12 @@ export interface BaseCardProps {
    */
   selected?: boolean;
   /**
+   * @uxpinignoreprop
    * An ID used for testing purposes applied as a data attribute (data-test-id)
    */
   testId?: string;
   /**
+   * @uxpinignoreprop
    * Class names to be appended to the className prop of the component
    */
   className?: string;
@@ -48,6 +50,7 @@ export interface CardProps extends BaseCardProps {
    */
   title?: string;
   /**
+   * @uxpinignoreprop
    * Any additional styles that are being applied
    */
   style?: React.CSSProperties;

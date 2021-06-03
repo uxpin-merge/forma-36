@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 import { Primitive } from '@contentful/f36-core';
 import type { CommonProps } from '@contentful/f36-core';
@@ -23,7 +23,7 @@ const icons = {
 export interface NoteProps extends CommonProps {
   noteType?: 'primary' | 'positive' | 'negative' | 'warning';
   title?: string;
-  children: React.ReactNode;
+  children: ReactNode;
   hasCloseButton?: boolean;
   onClose?: Function;
 }

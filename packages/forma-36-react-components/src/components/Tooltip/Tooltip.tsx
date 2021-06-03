@@ -5,6 +5,7 @@ import React, {
   MouseEvent,
   FocusEvent,
   CSSProperties,
+  ReactNode,
 } from 'react';
 import { usePopper } from 'react-popper';
 import { Placement } from '@popperjs/core';
@@ -23,19 +24,24 @@ export interface TooltipProps {
   /**
    * Child nodes to be rendered in the component and that will show the tooltip when they are hovered
    */
-  children: React.ReactNode;
+  children: ReactNode;
   /**
+   * @uxpinignoreprop
    * Class names to be appended to the className prop of the Tooltip wrapper
    */
   className?: string;
   /**
+   * @uxpinignoreprop
    * HTML element used to wrap the target of the Tooltip
    */
   containerElement?: React.ElementType;
   /**
    * Content of the Tooltip
    */
-  content?: React.ReactNode;
+  content?: ReactNode;
+  /**
+   * @uxpinignoreprop
+   */
   id?: string;
   /**
    * It controls the initial visibility of the Tooltip
@@ -70,14 +76,17 @@ export interface TooltipProps {
    */
   place?: TooltipPlace;
   /**
+   * @uxpinignoreprop
    * Class names to be appended to the className prop of the Tooltip’s target
    */
   targetWrapperClassName?: string;
   /**
+   * @uxpinignoreprop
    * An ID used for testing purposes applied as a data attribute (data-test-id)
    */
   testId?: string;
   /**
+   * @uxpinignoreprop
    * Boolean to control whether or not to render the tooltip in a React Portal.
    * Rendering content inside a Portal allows the tooltip to escape the bounds
    * of its parent while still being positioned correctly. Using a Portal is

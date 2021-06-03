@@ -18,12 +18,21 @@ import styles from './TextField.css';
 
 export interface TextFieldProps {
   name: string;
+  /**
+   * @uxpinignoreprop
+   */
   id: string;
   width?: string;
   labelText: string;
   value?: string;
   validationMessage?: string;
+  /**
+   * @uxpinignoreprop
+   */
   testId?: string;
+  /**
+   * @uxpinignoreprop
+   */
   className?: string;
   formLabelProps?: Partial<FormLabelProps>;
   textLinkProps?: Partial<TextLinkProps>;
