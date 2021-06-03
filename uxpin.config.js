@@ -2,6 +2,13 @@ module.exports = {
   components: {
     categories: [
       {
+        name: 'Layout',
+        include: [
+          'packages/core/src/Flex/Flex.tsx',
+          'packages/core/src/Grid/Grid.tsx',
+        ]
+      },
+      {
         name: 'Typography',
         include: [
           'packages/components/typography/src/DisplayText.tsx',
