@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement} from 'react';
+import React, { CSSProperties, ReactElement } from 'react';
 import cn from 'classnames';
 import { Close } from '@contentful/f36-icons';
 
@@ -8,9 +8,18 @@ import styles from './ModalHeader.css';
 export interface ModalHeaderProps {
   title: string;
   onClose?: Function;
+  /**
+   * @uxpinignoreprop
+   */
   testId?: string;
+  /**
+   * @uxpinignoreprop
+   */
   className?: string;
   isNotWrapped?: boolean;
+  /**
+   * @uxpinignoreprop
+   */
   style?: CSSProperties;
 }
 

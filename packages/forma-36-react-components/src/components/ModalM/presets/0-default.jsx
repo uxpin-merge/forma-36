@@ -1,13 +1,14 @@
 import React from 'react';
-import { Modal } from '../Modal';
-import { ModalHeader } from '../ModalHeader/ModalHeader';
-import { ModalContent } from '../ModalContent/ModalContent';
-import { ModalControls } from '../ModalControls/ModalControls';
+import Modal from '../Modal';
+import { ModalHeader } from '../../Modal/ModalHeader/ModalHeader';
+import { ModalContent } from '../../Modal/ModalContent/ModalContent';
+import { ModalControls } from '../../Modal/ModalControls/ModalControls';
 import { Button } from '../../../../../components/button/src/Button';
+// import { Button } from '@contentful/f36-button';
 
 export default (
   <Modal
-    uxpId="modal-1"
+    uxpId="modalM-1"
     isShown={false}
     title="Centered modal"
     size=""
@@ -33,22 +34,3 @@ export default (
     </ModalControls>
   </Modal>
 );
-
-{
-  /* <Modal title="Centered modal" isShown={isShown}>
-  {() => (
-    <React.Fragment>
-      <Modal.Header title="Title" />
-      <Modal.Content>Hello from controlled modal window</Modal.Content>
-      <Modal.Controls>
-        <Button buttonType="positive" onClick={() => setShown(false)}>
-          Confirm
-              </Button>
-        <Button buttonType="muted" onClick={() => setShown(false)}>
-          Close
-              </Button>
-      </Modal.Controls>
-    </React.Fragment>
-  )}
-</Modal> */
-}

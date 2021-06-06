@@ -4,7 +4,13 @@ import cn from 'classnames';
 import styles from './ModalControls.css';
 
 export interface ModalControlsProps {
+  /**
+   * @uxpinignoreprop
+   */
   testId?: string;
+  /**
+   * @uxpinignoreprop
+   */
   className?: string;
   children: ReactNode;
   style?: React.CSSProperties;

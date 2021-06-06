@@ -4,9 +4,18 @@ import cn from 'classnames';
 import styles from './ModalContent.css';
 
 export interface ModalContentProps {
+  /**
+   * @uxpinignoreprop
+   */
   testId?: string;
+  /**
+   * @uxpinignoreprop
+   */
   className?: string;
   children: ReactNode;
+  /**
+   * @uxpinignoreprop
+   */
   style?: React.CSSProperties;
 }
 

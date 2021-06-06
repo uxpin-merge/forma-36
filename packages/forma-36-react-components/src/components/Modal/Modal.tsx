@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import cn from 'classnames';
 import ReactModal from 'react-modal';
 
@@ -83,6 +83,7 @@ export interface ModalProps {
 
   // eslint-disable-next-line
   children: any;
+  parentSelector?: ReactNode;
 }
 
 export function Modal({
@@ -93,6 +94,7 @@ export function Modal({
   size,
   testId,
   topOffset,
+  parentSelector,
   ...otherProps
 }: ModalProps): React.ReactElement {
   const allProps = {
@@ -124,53 +126,56 @@ export function Modal({
   };
 
   return (
-    <ReactModal
-      ariaHideApp={false}
-      onRequestClose={otherProps.onClose}
-      isOpen={otherProps.isShown}
-      onAfterOpen={otherProps.onAfterOpen}
-      shouldCloseOnEsc={shouldCloseOnEscapePress}
-      shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
-      portalClassName={styles.Modal__portal}
-      className={{
-        base: cn(styles.Modal__wrap, {
-          [styles['Modal__wrap--zen']]: size === 'zen',
-        }),
-        afterOpen: styles['Modal__wrap--after-open'],
-        beforeClose: styles['Modal__wrap--before-close'],
-      }}
-      style={{
-        content: {
-          top: position === 'center' ? 0 : topOffset,
-        },
-      }}
-      overlayClassName={{
-        base: cn({
-          [styles.Modal__overlay]: true,
-          [styles['Modal__overlay--centered']]: position === 'center',
-        }),
-        afterOpen: styles['Modal__overlay--after-open'],
-        beforeClose: styles['Modal__overlay--before-close'],
-      }}
-      htmlOpenClassName="Modal__html--open"
-      bodyOpenClassName="Modal__body--open"
-      closeTimeoutMS={300}
-    >
-      <div
-        data-test-id={testId}
-        style={{
-          width: ModalSizesMapper[size] || size,
+    <>
+      <ReactModal
+        parentSelector={parentSelector}
+        ariaHideApp={false}
+        onRequestClose={otherProps.onClose}
+        isOpen={otherProps.isShown}
+        onAfterOpen={otherProps.onAfterOpen}
+        shouldCloseOnEsc={shouldCloseOnEscapePress}
+        shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
+        portalClassName={styles.Modal__portal}
+        className={{
+          base: cn(styles.Modal__wrap, {
+            [styles['Modal__wrap--zen']]: size === 'zen',
+          }),
+          afterOpen: styles['Modal__wrap--after-open'],
+          beforeClose: styles['Modal__wrap--before-close'],
         }}
-        className={cn(styles.Modal, otherProps.className, {
-          [styles['Modal--overflow']]: allowHeightOverflow,
-          [styles['Modal--zen']]: size === 'zen',
-        })}
+        style={{
+          content: {
+            top: position === 'center' ? 0 : topOffset,
+          },
+        }}
+        overlayClassName={{
+          base: cn({
+            [styles.Modal__overlay]: true,
+            [styles['Modal__overlay--centered']]: position === 'center',
+          }),
+          afterOpen: styles['Modal__overlay--after-open'],
+          beforeClose: styles['Modal__overlay--before-close'],
+        }}
+        htmlOpenClassName="Modal__html--open"
+        bodyOpenClassName="Modal__body--open"
+        closeTimeoutMS={300}
       >
-        {typeof otherProps.children === 'function'
-          ? otherProps.children(allProps)
-          : renderDefault()}
-      </div>
-    </ReactModal>
+        <div
+          data-test-id={testId}
+          style={{
+            width: ModalSizesMapper[size] || size,
+          }}
+          className={cn(styles.Modal, otherProps.className, {
+            [styles['Modal--overflow']]: allowHeightOverflow,
+            [styles['Modal--zen']]: size === 'zen',
+          })}
+        >
+          {typeof otherProps.children === 'function'
+            ? otherProps.children(allProps)
+            : renderDefault()}
+        </div>
+      </ReactModal>
+    </>
   );
 }
 
