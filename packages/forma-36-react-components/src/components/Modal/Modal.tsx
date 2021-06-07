@@ -82,7 +82,7 @@ export interface ModalProps {
   testId?: string;
 
   // eslint-disable-next-line
-  children: any;
+  children: ReactNode;
   parentSelector?: ReactNode;
 }
 
