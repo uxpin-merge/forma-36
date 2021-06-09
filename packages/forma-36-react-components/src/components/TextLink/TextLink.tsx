@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, ReactNode, AnchorHTMLAttributes } from 'react';
 import cn from 'classnames';
 import type { MouseEventHandler } from 'react';
 import { TabFocusTrap } from '@contentful/f36-utils';
@@ -26,11 +26,11 @@ export const textLinkColor = [
 type IconPositionType = 'right' | 'left';
 
 export interface TextLinkProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   linkType?: TextLinkType;
-  href?: React.AnchorHTMLAttributes<HTMLAnchorElement>['href'];
-  target?: React.AnchorHTMLAttributes<HTMLAnchorElement>['target'];
-  rel?: React.AnchorHTMLAttributes<HTMLInputElement>['rel'];
+  href?: AnchorHTMLAttributes<HTMLAnchorElement>['href'];
+  target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
+  rel?: AnchorHTMLAttributes<HTMLInputElement>['rel'];
   disabled?: boolean;
   testId?: string;
   onClick?: MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>;

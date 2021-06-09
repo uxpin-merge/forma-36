@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, ReactElement, ReactNode } from 'react';
 import cn from 'classnames';
 import type { MouseEventHandler } from 'react';
 import { EntityStatusBadge } from '@contentful/f36-badge';
@@ -51,7 +51,7 @@ export interface EntityListItemProps {
   /**
    * The DropdownList elements used to render actions for the component
    */
-  dropdownListElements?: React.ReactElement;
+  dropdownListElements?: ReactElement;
   /**
    * Renders a drag handle for the component for use in drag and drop contexts
    */
@@ -63,7 +63,7 @@ export interface EntityListItemProps {
   /**
    * Prop to pass a custom CardDragHandle component to for use in drag and drop contexts
    */
-  cardDragHandleComponent?: React.ReactNode;
+  cardDragHandleComponent?: ReactNode;
   /**
    * Props to pass down to the default CardDragHandle component (does not work with cardDragHandleComponent prop)
    */

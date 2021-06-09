@@ -16,6 +16,7 @@ module.exports = {
           'packages/components/paragraphM/ParagraphM.tsx',
           'packages/components/sectionHeadingM/SectionHeadingM.tsx',
           'packages/components/subheadingM/SubheadingM.tsx',
+          'packages/forma-36-react-components/src/components/TextLink/TextLink.tsx',
         ],
       },
       {
@@ -53,6 +54,8 @@ module.exports = {
           'packages/forma-36-react-components/src/components/Card/Card.tsx',
           'packages/forma-36-react-components/src/components/Tabs/Tabs.tsx',
           'packages/forma-36-react-components/src/components/Tabs/Tab/Tab.tsx',
+          'packages/forma-36-react-components/src/components/EntityList/EntityList.tsx',
+          'packages/forma-36-react-components/src/components/EntityList/EntityListItem/EntityListItem.tsx',
           // 'packages/forma-36-react-components/src/components/Modal/Modal.tsx',
           'packages/forma-36-react-components/src/components/ModalM/Modal.tsx',
           'packages/forma-36-react-components/src/components/Modal/ModalContent/ModalContent.tsx',

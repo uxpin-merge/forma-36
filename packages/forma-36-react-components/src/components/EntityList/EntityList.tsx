@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, ReactNode } from 'react';
 import cn from 'classnames';
 
 import styles from './EntityList.css';
@@ -11,7 +11,7 @@ export interface EntityListProps {
   /**
    * Child nodes to be rendered in the component
    */
-  children?: React.ReactNode;
+  children?: ReactNode;
   /**
    * An ID used for testing purposes applied as a data attribute (data-test-id)
    */
