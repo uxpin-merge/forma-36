@@ -6,6 +6,7 @@ module.exports = {
         include: [
           'packages/core/src/Flex/Flex.tsx',
           'packages/core/src/Grid/Grid.tsx',
+          'packages/core/src/Grid/GridItem/GridItem.tsx',
         ],
       },
       {

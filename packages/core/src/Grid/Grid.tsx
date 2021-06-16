@@ -16,10 +16,10 @@ export interface GridInternalProps extends MarginProps, PaddingProps {
   children?: React.ReactNode;
   /**
    * Defines how many columns, default is `auto` */
-  columns?: number | CSS.Property.GridTemplateColumns;
+  columns?: number;
   /**
    * Defines how many rows, default is `auto` */
-  rows?: number | CSS.Property.GridTemplateColumns;
+  rows?: number;
   /**
    * Spaces between rows, corresponds to of spacing tokens values, default is none */
   rowGap?: Spacing;
