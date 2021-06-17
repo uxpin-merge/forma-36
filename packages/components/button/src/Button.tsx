@@ -7,6 +7,7 @@ import { Icon, IconComponent } from '@contentful/f36-icon';
 import type { ButtonVariant, ButtonSize } from './types';
 import { styles } from './styles';
 import { Spinner } from '@contentful/f36-spinner';
+import IconM from '../../iconM/IconM';
 
 export interface ButtonProps
   extends Omit<HTMLProps<HTMLButtonElement & HTMLAnchorElement>, 'size'>,
@@ -43,6 +44,7 @@ export interface ButtonProps
   /**
    * Expects any of the icon components
    */
+  /** @uxpinignoreprop */
   icon?: IconComponent;
   /**
    * Adds loading indicator icon and disables interactions
@@ -52,6 +54,27 @@ export interface ButtonProps
    * Forces button to take 100% of the container
    */
   isFullWidth?: boolean;
+  /**
+   * Test id
+   */
+  /** @uxpinignoreprop */
+  testId?: string;
+  /**
+   * Adds onClick function
+   */
+  onClick?: () => void;
+  /**
+   * Type of Icon
+   */
+  iconName?: 'Menu' | 'ArrowDown' | 'ArrowUp';
+  iconSize?: 'large' | 'medium' | 'small' | 'tiny';
+  iconVariant?:
+    | 'negative'
+    | 'positive'
+    | 'primary'
+    | 'secondary'
+    | 'warning'
+    | 'white';
 }
 
 const _Button = (props: ButtonProps, ref) => {
@@ -95,12 +118,22 @@ const _Button = (props: ButtonProps, ref) => {
       data-test-id={testId}
       {...otherProps}
     >
-      {icon && !isLoading && (
+      {/* {icon && !isLoading && (
         <Flex as="span" marginRight={children ? 'spacing2Xs' : 'none'}>
           <Icon className={styles.buttonIcon} as={icon} />
         </Flex>
+      )} */}
+      {props.iconName && !isLoading && (
+        <Flex as="span" marginRight={children ? 'spacing2Xs' : 'none'}>
+          <IconM
+            icon={props.iconName}
+            size={props.iconSize}
+            variant={props.iconVariant}
+          />
+        </Flex>
       )}
       <span className={styles.buttonText}>{children}</span>
+
       {isLoading && (
         <Spinner
           marginLeft={children || !isLoading ? 'spacingXs' : 'none'}
