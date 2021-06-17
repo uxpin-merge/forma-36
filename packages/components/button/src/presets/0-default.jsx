@@ -8,6 +8,8 @@ export default (
     size="medium"
     type="default"
     isFullWidth={true}
+    icon=""
+    iconVariant="white"
   >
     Submit
   </Button>
